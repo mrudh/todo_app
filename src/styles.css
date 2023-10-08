@@ -1,0 +1,168 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: floralwhite;
+    color: #C02990;
+    max-width: 768px;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  #root {
+    border: 2px solid #C02990;
+    padding: 38px;
+    margin: 50px;
+    border-radius: 16px;
+    box-shadow: 6px 6px #F37ECE;
+  }
+  
+  .new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  
+  .btn {
+    background: hsl(200, 100%, 50%, 0.1);
+    border: 1px solid #C02990;
+    color: hsl(200, 100%, 50%);
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    outline: none;
+  }
+
+  label[for="item"] {
+    font-size: 28px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  
+  .btn:hover,
+  .btn:focus-visible {
+    background: hsl(200, 100%, 50%, 0.2);
+  }
+  
+  .btn.btn-danger {
+    background: hsl(0, 100%, 40%, 0.1);
+    border: 1px solid hsl(0, 100%, 40%);
+    color: hsl(0, 100%, 40%);
+    border-radius: 20px;
+  }
+  
+  .btn.btn-danger:hover,
+  .btn.btn-danger:focus-visible {
+    background: hsl(0, 100%, 40%, 0.2);
+  }
+
+  .btn.add-btn {
+    width: 150px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    background: #C02990;
+  }
+  
+  .new-item-form input {
+    outline: none;
+    border: 1px solid pink;
+    background: #FBD2EE;
+    border-radius: 0.25em;
+    padding: 10px;
+  }
+  
+  .new-item-form input:focus {
+    border: 1px solid hsl(200, 100%, 70%);
+  }
+  
+  .header {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .list {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+    list-style: none;
+  }
+  
+  .list li:has(input:checked) label {
+    color: hsl(200, 20%, 40%);
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .list li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: #000;
+  }
+  
+  .list li label {
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .list li:has(input:focus-visible) label {
+    outline: 1px solid hsl(200, 100%, 50%);
+  }
+  
+  .list li input {
+    outline: none;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+  }
+  
+  .list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: #FBD2EE;
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .list li label:hover::before {
+    background: hsl(200, 100%, 80%);
+  }
+  
+  .list li:has(input:checked) label::before {
+    content: "✔";
+    background: #C02990;
+    color: hsl(200, 100%, 90%);
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .list li:has(input:checked) label:hover::before {
+    background: hsl(200, 100%, 30%);
+  }
+
+  ::placeholder {
+    color: #000;
+  }
